@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fce8ed">
+  <title>For My Sayang ♡</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient-hearts" aria-hidden="true"></div>
+
+  <main class="app">
+
+    <!-- HALAMAN PASSWORD -->
+    <section class="screen active" id="password-screen">
+      <p class="kicker">A LITTLE SURPRISE FOR YOU ♡</p>
+      <div class="big-heart">♡</div>
+      <p class="overline">khusus untuk seseorang yang istimewa</p>
+
+      <h1>Hai, Sayangku<span class="accent"> ♡</span></h1>
+      <p class="intro">
+        Wisnuchuun punya sesuatu yang spesial buat kamu.
+        Siap membuka hadiah kecil dari aku?
+      </p>
+
+      <form class="glass-card" id="password-form">
+        <label for="password-input">
+          Masukkan password rahasianya 🤍
+        </label>
+
+        <div class="input-wrap">
+          <input
+            id="password-input"
+            type="password"
+            inputmode="numeric"
+            autocomplete="off"
+            placeholder="Password kamu..."
+            required
+          >
+          <button
+            class="show-password"
+            id="toggle-password"
+            type="button"
+            aria-label="Tampilkan password"
+          >♡</button>
+        </div>
+
+        <p id="password-message" class="message" aria-live="polite"></p>
+        <button class="primary-btn" type="submit">
+          Buka hadiahku ♡
+        </button>
+      </form>
+
+      <p class="signature">made with love by <b>wisnuchuun</b></p>
+    </section>
+
+    <!-- HALAMAN LOADING -->
+    <section class="screen loading-screen" id="loading-screen">
+      <div class="pulse-heart">♥</div>
+      <h2>Sebentar ya, Sayang...</h2>
+      <p>Wisnuchuun lagi menyiapkan sesuatu buat kamu.</p>
+      <div class="progress"><span></span></div>
+      <small>mengumpulkan banyak cinta...</small>
+    </section>
+
+    <!-- HALAMAN BERANDA -->
+    <section class="screen" id="home-screen">
+      <p class="kicker">A WEBSITE MADE WITH LOVE ♡</p>
+
+      <div class="polaroid hero-photo">
+        <img
+          src="assets/foto-kalian.jpg"
+          alt="Foto Sayang dan wisnuchuun"
+          onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+        >
+        <div class="photo-placeholder" hidden>
+          <span>♡</span>
+          <b>Foto kita di sini</b>
+          <small>Tambahkan foto ke folder assets</small>
+        </div>
+        <span class="tape"></span>
+      </div>
+
+      <p class="overline">untuk kesayanganku</p>
+      <h1>For My <span class="accent">Sayang</span> ♡</h1>
+      <p class="intro">
+        Ada banyak hal yang ingin wisnuchuun ceritakan.
+        Siapkan hati kecilmu, yaa.
+      </p>
+
+      <div class="music-card">
+        <div class="music-note">♫</div>
+        <div class="music-copy">
+          <b>Our little soundtrack</b>
+          <span id="music-status">Musik belum diputar</span>
+        </div>
+        <button
+          id="music-toggle"
+          class="music-toggle"
+          type="button"
+          aria-label="Putar musik"
+        >▶</button>
+      </div>
+
+      <audio id="background-music" loop preload="none">
+        <source src="assets/lagu.mp3" type="audio/mpeg">
+      </audio>
+
+      <p class="music-help">
+        Tambahkan lagu MP3 ke folder <b>assets</b>,
+        beri nama <b>lagu.mp3</b>.
+      </p>
+
+      <nav class="menu">
+        <button class="menu-item" data-go="letter-screen" type="button">
+          <span class="menu-emoji">💌</span>
+          <span class="menu-text">
+            <b>Surat kecil untukmu</b>
+            <small>Ada yang ingin aku katakan...</small>
+          </span>
+          <span class="arrow">↗</span>
+        </button>
+
+        <button class="menu-item" data-go="gallery-screen" type="button">
+          <span class="menu-emoji">📸</span>
+          <span class="menu-text">
+            <b>Galeri kenangan</b>
+            <small>Momen-momen kecil kita</small>
+          </span>
+          <span class="arrow">↗</span>
+        </button>
+
+        <button class="menu-item" data-go="promise-screen" type="button">
+          <span class="menu-emoji">🌷</span>
+          <span class="menu-text">
+            <b>Satu janji kecil</b>
+            <small>Dari wisnuchuun untuk Sayang</small>
+          </span>
+          <span class="arrow">↗</span>
+        </button>
+      </nav>
+
+      <p class="signature">
+        Semoga kita selalu punya alasan untuk tersenyum bersama ♡
+      </p>
+    </section>
+
+    <!-- HALAMAN SURAT CINTA -->
+    <section class="screen content-screen" id="letter-screen">
+      <button class="back-btn" data-go="home-screen" type="button">
+        ← Kembali
+      </button>
+
+      <div class="section-icon">💌</div>
+      <p class="overline">a letter from my heart</p>
+      <h2>Untuk Sayang,<br><span class="accent">dari wisnuchuun</span></h2>
+
+      <article class="letter-paper">
+        <p class="letter-top">dibaca sambil senyum, yaa ♡</p>
+        <p>Sayang,</p>
+
+        <p>
+          Mungkin aku nggak selalu bisa memberikan kamu dunia yang sempurna.
+          Aku juga bukan seseorang yang selalu tahu cara membuat semuanya
+          baik-baik saja. Tapi aku selalu ingin belajar menjadi seseorang
+          yang bisa membuat kamu merasa dicintai, dihargai, dan nggak sendirian.
+        </p>
+
+        <p>
+          Terima kasih sudah hadir di hidupku. Terima kasih untuk setiap tawa,
+          cerita, perhatian kecil, dan semua waktu yang kita habiskan bersama.
+          Hal-hal sederhana yang kita lakukan bisa jadi kenangan yang paling
+          aku sayangi.
+        </p>
+
+        <p>
+          Kalau suatu hari kamu capek, istirahatlah sebentar, ya?
+          Kalau kamu sedih, ceritalah sama aku. Kalau dunia terasa berat,
+          kita hadapi pelan-pelan bersama. Kamu nggak harus selalu kuat
+          setiap saat.
+        </p>
+
+        <p>
+          Aku nggak cuma mau hadir di hari-hari bahagiamu. Aku juga ingin
+          menemani kamu melewati hari-hari yang sulit, mendengarkan ceritamu,
+          dan terus belajar memahami kamu.
+        </p>
+
+        <p>
+          <b>
+            Aku sayang kamu, Sayang. Bukan cuma karena hari ini,
+            tapi karena aku ingin terus mengenal, memahami, dan memilih
+            kamu lagi setiap harinya.
+          </b>
+        </p>
+
+        <p class="letter-end">
+          Dengan seluruh rasa sayangku,<br>
+          <b>wisnuchuun ♡</b>
+        </p>
+      </article>
+
+      <button class="primary-btn" data-go="gallery-screen" type="button">
+        Lihat kenangan kita ♡
+      </button>
+    </section>
+
+    <!-- HALAMAN GALERI FOTO -->
+    <section class="screen content-screen" id="gallery-screen">
+      <button class="back-btn" data-go="home-screen" type="button">
+        ← Kembali ke beranda
+      </button>
+
+      <p class="overline">little pieces of us</p>
+      <h2>Galeri <span class="accent">Kenangan</span> 📸</h2>
+      <p class="intro">
+        Setiap foto punya cerita. Ganti foto contoh ini dengan momen
+        kita, yaa.
+      </p>
+
+      <div class="gallery">
+        <figure class="polaroid tilt-left">
+          <img src="assets/foto-1.jpg" alt="Kenangan pertama"
+               onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+          <div class="photo-placeholder" hidden>
+            <span>♡</span><b>Foto kenangan 1</b>
+          </div>
+          <figcaption>Momen kecil, arti besar ♡</figcaption>
+        </figure>
+
+        <figure class="polaroid tilt-right">
+          <img src="assets/foto-2.jpg" alt="Kenangan kedua"
+               onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+          <div class="photo-placeholder" hidden>
+            <span>♡</span><b>Foto kenangan 2</b>
+          </div>
+          <figcaption>Senyum favoritku</figcaption>
+        </figure>
+
+        <figure class="polaroid tilt-right">
+          <img src="assets/foto-3.jpg" alt="Kenangan ketiga"
+               onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+          <div class="photo-placeholder" hidden>
+            <span>♡</span><b>Foto kenangan 3</b>
+          </div>
+          <figcaption>Semoga ada banyak cerita lagi</figcaption>
+        </figure>
+
+        <figure class="polaroid tilt-left">
+          <img src="assets/foto-4.jpg" alt="Kenangan keempat"
+               onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+          <div class="photo-placeholder" hidden>
+            <span>♡</span><b>Foto kenangan 4</b>
+          </div>
+          <figcaption>Aku dan kamu, pelan-pelan ♡</figcaption>
+        </figure>
+      </div>
+
+      <button class="primary-btn" data-go="promise-screen" type="button">
+        Ada satu hal lagi... ♡
+      </button>
+    </section>
+
+    <!-- HALAMAN JANJI -->
+    <section class="screen content-screen" id="promise-screen">
+      <button class="back-btn" data-go="home-screen" type="button">
+        ← Kembali ke beranda
+      </button>
+
+      <div class="section-icon">🌷</div>
+      <p class="overline">one little promise</p>
+      <h2>Untuk hari ini,<br><span class="accent">dan hari-hari nanti</span></h2>
+
+      <div class="promise-card">
+        <p>
+          Sayang, aku nggak bisa janji kalau setiap hari akan selalu mudah.
+          Tapi aku ingin terus berusaha hadir, mendengarkan kamu, menghargai
+          perasaanmu, dan memperbaiki diri saat aku salah.
+        </p>
+
+        <p>
+          Aku ingin kita tetap bisa tertawa karena hal receh, saling
+          menyemangati saat lelah, dan merayakan hal-hal kecil yang berarti
+          buat kita.
+        </p>
+
+        <p class="big-promise">
+          Aku tetap memilih kamu, Sayang. Hari ini, besok, dan selama kita
+          sama-sama mau berjuang. ♡
+        </p>
+
+        <p class="letter-end">Always your wisnuchuun 💗</p>
+      </div>
+
+      <button class="primary-btn" id="finish-button" type="button">
+        Kirim peluk virtual ♡
+      </button>
+      <p id="finish-message" class="finish-message" aria-live="polite"></p>
+    </section>
+
+  </main>
+</body>
+</html>
